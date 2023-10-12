@@ -16,12 +16,20 @@ public class TelephoneDirectory {
         telephoneDirectory.put(number, name);
     }
 
-    public void removeContactFromlist(int number){
+    public void removeContactFromList(int number){
         telephoneDirectory.remove(number);
     }
 
-    public void addToFavoriteContacts(int number, String name){
-        favoriteContacts.put(number, name);
+    public void addToFavoriteContacts(int number){
+        for(Map.Entry<Integer, String> contact : telephoneDirectory.entrySet()){
+            if(contact.getKey().equals(number)){
+                favoriteContacts.put(contact.getKey(), contact.getValue());
+            }
+        }
+    }
+
+    public void removeContactFromFavoriteList(int number){
+        favoriteContacts.remove(number);
     }
 
     public Map<Integer, String> showContactList(){

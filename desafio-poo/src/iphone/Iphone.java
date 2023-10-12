@@ -4,11 +4,15 @@ import java.util.Scanner;
 
 import music.MusicPlayer;
 import music.MusicalList;
+import telephone.Telephone;
+import telephone.TelephoneDirectory;
 
-public class Iphone implements MusicPlayer{
+public class Iphone implements MusicPlayer, Telephone{
     Scanner sc = new Scanner(System.in);
     MusicalList musicalList = new MusicalList();
+    TelephoneDirectory telephoneDirectory = new TelephoneDirectory();
 
+    //Music player methods
     @Override
     public void playMusic() {
         System.out.println("Playing music..");
@@ -65,6 +69,56 @@ public class Iphone implements MusicPlayer{
 
     public void showFavoritesList(){
         System.out.println(musicalList.showFavoritesList());
+    }
+
+    //Telephone Methods
+    @Override
+    public void connect() {
+        System.out.println("Calling..");
+    }
+
+    @Override
+    public void attend() {
+        System.out.println("Attend..");
+    }
+
+    @Override
+    public void startVoicemail() {
+        System.out.println("Starting voicemail..");
+    }
+
+    public void addContactToList(){
+        System.out.print("Enter contact number: ");
+        int numberContact = sc.nextInt();
+        System.out.print("Enter the contact name: ");
+        String contactName = sc.nextLine();
+        telephoneDirectory.addContactToList(numberContact, contactName);
+    }
+
+    public void removeContactFromList(){
+        System.out.print("Enter the number of the contact you want to remove: ");
+        int numberRemove = sc.nextInt();
+        telephoneDirectory.removeContactFromList(numberRemove);
+    }
+
+    public void addContactToFavoriteList(){
+        System.out.print("Enter contact number from your list to add to favorites: ");
+        int numberAdd = sc.nextInt();
+        telephoneDirectory.addToFavoriteContacts(numberAdd);
+    }
+
+    public void removeContactFromFavoriteList(){
+        System.out.print("Enter the number of the contact you want to remove: ");
+        int numberRemove = sc.nextInt();
+        telephoneDirectory.removeContactFromFavoriteList(numberRemove);
+    }
+
+    public void showContactList(){
+        System.out.println(telephoneDirectory.showContactList());
+    }
+
+    public void showFavoriteContactList(){
+        System.out.println(telephoneDirectory.showFavoriteContactList());
     }
 
 

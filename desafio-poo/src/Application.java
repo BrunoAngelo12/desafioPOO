@@ -2,28 +2,42 @@ import iphone.Iphone;
 
 public class Application {
     public static void main(String[] args) {
-        Iphone cel = new Iphone();
-        cel.playMusic();
+        Iphone iPhone = new Iphone();
+        //Methods Music Player
+        iPhone.playMusic();
         System.out.println();
-        cel.pauseMusic();
+        iPhone.pauseMusic();
         System.out.println();
-        cel.selectMusic();
+        iPhone.selectMusic();
         System.out.println();
-        cel.addSongToPlaylist();
+        iPhone.addSongToPlaylist();
         System.out.println();
-        cel.addSongToPlaylist();
+        iPhone.addSongToPlaylist();
         System.out.println();
-        cel.showMusicList();
+        iPhone.showMusicList();
         System.out.println();
-        cel.addToFavorites();
+        iPhone.addToFavorites();
         System.out.println();
-        cel.addToFavorites();
+        iPhone.addToFavorites();
         System.out.println();
-        cel.showFavoritesList();
+        iPhone.showFavoritesList();
         System.out.println();
-        cel.removeSongToFavorites();
+        iPhone.removeSongToFavorites();
         System.out.println();
-        cel.removeSongToPlaylist();
-        System.out.println();       
+        iPhone.removeSongToPlaylist();
+        System.out.println();
+        iPhone.connect();
+        System.out.println();    
+        iPhone.attend();
+        System.out.println();
+        iPhone.startVoicemail();
+        System.out.println();
+        iPhone.addContactToList();
+        System.out.println();
+        iPhone.addContactToList();
+        System.out.println();
+        iPhone.removeContactFromList();
+        System.out.println();
+
     }
 }
