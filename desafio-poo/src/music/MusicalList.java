@@ -24,6 +24,7 @@ public class MusicalList {
             if(m.equalsIgnoreCase(music)){
                 musicalList.remove(music);
                 System.out.println("Song removed from playlist!");
+                break;
             }
         }
     }
@@ -38,6 +39,7 @@ public class MusicalList {
             if(m.equalsIgnoreCase(music)){
                 favoriteList.remove(music);
                 System.out.println("Song removed from favorites!");
+                break;
             }
         }
     }
