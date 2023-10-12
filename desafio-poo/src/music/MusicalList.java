@@ -4,8 +4,15 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class MusicalList {
-    protected Set<String> musicalList = new LinkedHashSet<>();
-    protected Set<String> favoriteList = new LinkedHashSet<>();
+    Set<String> musicalList = new LinkedHashSet<>();
+    Set<String> favoriteList = new LinkedHashSet<>();
+
+    
+    
+    public MusicalList() {
+        this.musicalList = new LinkedHashSet<>();
+        this.favoriteList = new LinkedHashSet<>();
+    }
 
     public void addSongToPlaylist(String music){
         musicalList.add(music);
@@ -43,7 +50,12 @@ public class MusicalList {
         return favoriteList;
     }
 
-
-
+    public void playSelectedMusic(String musicPlaying){
+        for(String m : musicalList){
+            if(m.equalsIgnoreCase(musicPlaying)){
+                System.out.println("Playing " + m + "...");
+            }
+        }
+    }
 
 }
