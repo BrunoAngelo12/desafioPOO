@@ -2,15 +2,18 @@ package iphone;
 
 import java.util.Scanner;
 
+import internet_browser.Browser;
+import internet_browser.InternetBrowser;
 import music.MusicPlayer;
 import music.MusicalList;
 import telephone.Telephone;
 import telephone.TelephoneDirectory;
 
-public class Iphone implements MusicPlayer, Telephone{
+public class Iphone implements MusicPlayer, Telephone, InternetBrowser{
     Scanner sc = new Scanner(System.in);
     MusicalList musicalList = new MusicalList();
     TelephoneDirectory telephoneDirectory = new TelephoneDirectory();
+    Browser browser = new Browser();
 
     //Music player methods
     @Override
@@ -119,6 +122,26 @@ public class Iphone implements MusicPlayer, Telephone{
 
     public void showFavoriteContactList(){
         System.out.println(telephoneDirectory.showFavoriteContactList());
+    }
+
+
+    //Browser Methods
+    @Override
+    public void displayPage() {
+        System.out.println(browser.displayPage());
+    }
+
+    @Override
+    public void addNewTab() {
+        System.out.print("Enter the url: ");
+        String url = sc.nextLine();
+        browser.addNewTab(url);
+    }
+
+    @Override
+    public void updatePage() {
+        System.out.println("Updating...");
+        displayPage();
     }
 
 
