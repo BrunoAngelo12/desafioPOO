@@ -11,8 +11,13 @@ public class Browser {
     }
 
     public String displayPage(){
-        int currentPage = browser.size();
-        return browser.get(currentPage);
+        int currentPage = browser.size() - 1;
+        if (!browser.isEmpty()){
+            return browser.get(currentPage);
+        }else{
+            return "Add a new page";
+        }
+        
     }
 
     public String addNewTab(String newTab){

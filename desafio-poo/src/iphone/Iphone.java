@@ -93,6 +93,7 @@ public class Iphone implements MusicPlayer, Telephone, InternetBrowser{
     public void addContactToList(){
         System.out.print("Enter contact number: ");
         int numberContact = sc.nextInt();
+        sc.nextLine();
         System.out.print("Enter the contact name: ");
         String contactName = sc.nextLine();
         telephoneDirectory.addContactToList(numberContact, contactName);
@@ -101,6 +102,7 @@ public class Iphone implements MusicPlayer, Telephone, InternetBrowser{
     public void removeContactFromList(){
         System.out.print("Enter the number of the contact you want to remove: ");
         int numberRemove = sc.nextInt();
+        sc.nextLine();
         telephoneDirectory.removeContactFromList(numberRemove);
     }
 
@@ -111,8 +113,9 @@ public class Iphone implements MusicPlayer, Telephone, InternetBrowser{
     }
 
     public void removeContactFromFavoriteList(){
-        System.out.print("Enter the number of the contact you want to remove: ");
+        System.out.print("Enter the number of the contact you want to remove from the favorites list: ");
         int numberRemove = sc.nextInt();
+        sc.nextLine();
         telephoneDirectory.removeContactFromFavoriteList(numberRemove);
     }
 
@@ -141,7 +144,7 @@ public class Iphone implements MusicPlayer, Telephone, InternetBrowser{
     @Override
     public void updatePage() {
         System.out.println("Updating...");
-        displayPage();
+        System.out.println(browser.displayPage());
     }
 
 
