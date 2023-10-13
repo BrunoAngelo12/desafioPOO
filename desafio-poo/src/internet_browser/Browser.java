@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Browser {
-    List<String> browser = new ArrayList<>();
+    protected List<String> browser = new ArrayList<>();
 
     public Browser() {
         this.browser = new ArrayList<>();

@@ -4,8 +4,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class MusicalList {
-    Set<String> musicalList = new LinkedHashSet<>();
-    Set<String> favoriteList = new LinkedHashSet<>();
+    protected Set<String> musicalList = new LinkedHashSet<>();
+    protected Set<String> favoriteList = new LinkedHashSet<>();
 
     
     

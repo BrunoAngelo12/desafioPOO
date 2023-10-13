@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TelephoneDirectory {
-    Map<Integer, String> telephoneDirectory = new HashMap<>();
-    Map<Integer, String> favoriteContacts = new HashMap<>();
+    protected Map<Integer, String> telephoneDirectory = new HashMap<>();
+    protected Map<Integer, String> favoriteContacts = new HashMap<>();
 
     public TelephoneDirectory() {
         this.telephoneDirectory = new HashMap<>();
